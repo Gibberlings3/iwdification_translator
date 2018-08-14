@@ -1,0 +1,342 @@
+BACKUP ~iwdification_translate/backup~ // location to store files for uninstall purposes
+SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=185~ // URL displayed if install fails
+
+VERSION ~v2~
+
+BEGIN ~build tra files~
+REQUIRE_PREDICATE GAME_IS ~iwdee~ ~Must be run on IWDEE!~
+
+COPY ~iwdification_translate/ansi.tra~ ~override/game_strings.tra~
+     ~iwdification_translate/utf8.tra~ ~override/game_strings_ee.tra~
+
+ACTION_CLEAR_ARRAY cd_strings
+ACTION_DEFINE_ASSOCIATIVE_ARRAY cd_strings BEGIN
+
+  3001 => 36565
+  3002 => 6502
+  3003 => 37641
+  3004 => 35706
+  3005 => 19792
+  3006 => 40309
+  3007 => 19794
+  3008 => 40310
+  3009 => 19793
+  3010 => 21441
+  3011 => 24243
+  3012 => 40308
+  3013 => 775
+  3014 => ~copy contents of @3004 and remove the reference to boring beetle in the last line~
+  3015 => 23723
+  3020 => 12093
+  3021 => 6393
+  3030 => 12687
+  3031 => 6394
+  3040 => 25311
+  3041 => 24242
+  3050 => 6398
+  3051 => 6399
+  3060 => 25332
+  3061 => 24812
+  3070 => 6512
+  3071 => 6513
+  3080 => 6514
+  3081 => 6515
+  3082 => 34044
+  3090 => 7509
+  3091 => 7510
+  3092 => 14706
+  3100 => 7511
+  3101 => 7512
+  3110 => 7513
+  3111 => 7514
+  3112 => 14708
+  3120 => 25340
+  3121 => 24246
+  3130 => 25345
+  3131 => 21468
+  3140 => 25364
+  3141 => 24245
+  3150 => 7404
+  3151 => 7516
+  3160 => 7520
+  3161 => 7521
+  3162 => 9193
+  3163 => 30408
+  3170 => 7517
+  3171 => 7518
+  3180 => 25320
+  3181 => 24244
+  3182 => 25051
+  3190 => 36360
+  3191 => 24838
+  3192 => 35042
+  3200 => 36379
+  3201 => 24842
+  3202 => 35040
+  3210 => 36674
+  3211 => 35782
+  3212 => 35046
+  3220 => 7534
+  3221 => 7536
+  3222 => 783
+  3230 => 7537
+  3231 => 7538
+  3240 => 2839
+  3241 => 7548
+  3250 => 16156
+  3251 => 16165
+  3252 => 5698
+  3260 => 12130
+  3261 => 7552
+  3270 => 7553
+  3271 => 7554
+  3272 => 37424
+  3273 => 40836
+  3280 => 25321
+  3281 => 21465
+  3282 => 14443
+  3290 => 25348
+  3291 => 21461
+  3300 => 25357
+  3301 => 21464
+  3310 => 16158
+  3311 => 16170
+  3312 => 6310
+  3313 => 860
+  3320 => 7575
+  3321 => 7576
+  3330 => 7577
+  3331 => 7578
+  3340 => 25343
+  3341 => 21466
+  3342 => 21450
+  3343 => 40323
+  3344 => 21449
+  3345 => 40324
+  3346 => 21448
+  3347 => 40325
+  3348 => 21447
+  3349 => 40326
+  3350 => 21446
+  3351 => 40327
+  3352 => 21444
+  3353 => 40328
+  3354 => 21443
+  3355 => 40329
+  3356 => 21648
+  3357 => 21649
+  3358 => 21650
+  3359 => 21651
+  3360 => 21652
+  3361 => 21653
+  3362 => 21654
+  3370 => 25354
+  3371 => 21469
+  3380 => 16159
+  3381 => 16358
+  3382 => 869
+  3383 => 870
+  3390 => 14716
+  3391 => 7585
+  3400 => 25325
+  3401 => 21470
+  3410 => 25331
+  3411 => 21471
+  3412 => 21608
+  3420 => 16160
+  3421 => 16359
+  3422 => 873
+  4010 => 757
+  4011 => 7903
+  4020 => 25314
+  4021 => 25920
+  4030 => 25355
+  4031 => 21479
+  4040 => 9189
+  4041 => 7896
+  4042 => 40842
+  4050 => 25308
+  4051 => 12139
+  4052 => 21646
+  4060 => 21423
+  4061 => 7560
+  4070 => 25315
+  4071 => 7533
+  4080 => 14720
+  4081 => 7910
+  4082 => 40257
+  4083 => 40256
+  4090 => 25313
+  4091 => 21478
+  4100 => 25324
+  4101 => 6621
+  4110 => 25339
+  4111 => 24256
+  4120 => 25317
+  4121 => 21467
+  4130 => 25350
+  4131 => 21460
+  4140 => 25319
+  4141 => 21459
+  4150 => 25338
+  4151 => 21458
+  4160 => 25353
+  4161 => 24255
+  4170 => 40253
+  4171 => 40254
+  4180 => 24382
+  4181 => 40772
+  4190 => 1901
+  4191 => 7912
+  4192 => 774
+  4193 => 34527
+  4200 => 12064
+  4201 => 7913
+  4210 => 9195
+  4211 => 7914
+  4212 => 40255
+  4220 => 14579
+  4221 => 7916
+  4230 => 25310
+  4231 => 24810
+  4240 => 25318
+  4241 => 24250
+  4250 => 25360
+  4251 => 24248
+  4260 => 25352
+  4261 => 24254
+  4270 => 25347
+  4271 => 24252
+  4280 => 25356
+  4281 => 24253
+  4290 => 25365
+  4291 => 21462
+  4300 => 14726
+  4301 => 8020
+  4310 => 9197
+  4311 => 8040
+  4320 => 25344
+  4321 => 21475
+  4330 => 25358
+  4331 => 24247
+  4340 => 25291
+  4341 => 24251
+  4350 => 40830
+  4351 => 40831
+  4360 => 2927
+  4361 => 8056
+  4370 => 36775
+  4371 => 21472
+  4380 => 25351
+  4381 => 21473
+  4390 => 22146
+  4391 => 8099
+  4392 => 18628
+  4393 => 14728
+  4400 => 3070
+  4401 => 8100
+  4410 => 14733
+  4411 => 8101
+  4420 => 25322
+  4421 => 21477
+  4430 => 25327
+  4431 => 21476
+  4440 => 25337
+  4441 => 21474
+  4450 => 37115
+  4451 => 24913
+  4452 => 26539
+  4460 => 37655
+  4461 => 40832
+  4462 => 35497
+  5001 => 26268
+  5002 => 26852
+  5003 => ~This is the short description of The Ballad of Three Heroes; take it from the bard description in @5020. The range is 30' radius; doublecheck the range in @5020, too.~
+  5004 => 26266
+  5005 => 26868
+  5006 => ~This is the short description of The Tale of Curran Strongheart; take it from the bard description in @5020. The range is 30' radius; doublecheck the range in @5020, too.~
+  5007 => 26265
+  5008 => 26869
+  5009 => ~This is the short description of Tymora's Melody - Luck and Skill Bonuses; take it from the bard description in @5020. The range is 30' radius; doublecheck the range in @5020, too.~
+  5010 => 26264
+  5011 => 26865
+  5012 => ~This is the short description of The Song of Kaudies; take it from the bard description in @5020. The range is 30' radius; doublecheck the range in @5020, too.~
+  5013 => 26263
+  5014 => 26866
+  5015 => ~This is the short description of The Siren's Yearning; take it from the bard description in @5020. The range is 25' radius; doublecheck the range in @5020, too.~
+  5016 => 26429
+  5017 => 26262
+  5018 => 26867
+  5019 => ~This is the short description of War Chant of Sith; take it from the bard description in @5020. The range is 30' radius; doublecheck the range in @5020, too.~
+  5020 => 37236
+  6001 => 9785
+  6002 => ~Original IWD strref 8564~
+  6003 => ~manual translation~
+  6004 => ~manual translation, but much can be copied from @6002~
+  6005 => ~manual translation~
+  6006 => ~manual translation, but much can be copied from @6002~
+  6007 => ~manual translation~
+  6008 => ~manual translation, but much can be copied from @6002~
+  6009 => ~manual translation~
+  6010 => ~manual translation, but much can be copied from @6002~
+  6011 => ~manual translation~
+  6012 => ~manual translation, but much can be copied from @6002~
+  6013 => ~manual translation~
+  6014 => ~manual translation~
+  6015 => ~manual translation~
+  6016 => ~manual translation~
+  6017 => ~manual translation~
+
+END
+
+ACTION_CLEAR_ARRAY cd_strings_ee
+ACTION_DEFINE_ASSOCIATIVE_ARRAY cd_strings_ee BEGIN
+
+  6002 => 8564
+  6004 => ~manual translation, but much can be copied from @6002~
+  6006 => ~manual translation, but much can be copied from @6002~
+  6008 => ~manual translation, but much can be copied from @6002~
+  6010 => ~manual translation, but much can be copied from @6002~
+  6012 => ~manual translation, but much can be copied from @6002~
+
+END
+
+ACTION_PHP_EACH cd_strings AS traref => strref BEGIN
+
+  ACTION_IF !IS_AN_INT strref BEGIN
+  
+    OUTER_SPRINT contents ~%strref%~
+  
+  END ELSE BEGIN
+  
+    ACTION_GET_STRREF strref contents
+  
+  END
+  
+  APPEND ~game_strings.tra~ "  @%traref% = ~%contents%~"
+  
+END
+
+ACTION_PHP_EACH cd_strings_ee AS traref => strref BEGIN
+
+  ACTION_IF !IS_AN_INT strref BEGIN
+  
+    OUTER_SPRINT contents ~%strref%~
+  
+  END ELSE BEGIN
+  
+    ACTION_GET_STRREF strref contents
+  
+  END
+  
+  APPEND ~game_strings_ee.tra~ "  @%traref% = ~%contents%~"
+  
+END
+
+COPY + ~override/game_strings.tra~ ~iwdification_translate/game_strings.tra~
+  REPLACE_TEXTUALLY ~—~ ~ - ~
+  REPLACE_TEXTUALLY ~^– ~ ~- ~
+
+COPY + ~override/game_strings_ee.tra~ ~iwdification_translate/game_strings_ee.tra~
+  REPLACE_TEXTUALLY ~—~ ~ - ~
+  REPLACE_TEXTUALLY ~^– ~ ~- ~
